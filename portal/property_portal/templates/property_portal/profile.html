@@ -1,0 +1,26 @@
+{% extends 'property_portal/base.html' %}
+<title>{% block title %}User Profile{% endblock %}</title>
+
+{% block body %}
+<div class = "container-fluid">
+    <div class = "col-md-7">
+        <div class="profile-item">
+            <h2>Profile</h2>
+            <h4>Username :{{ user}} </h3>
+            <h4>First Name :{{ user.first_name }}</h4>
+            <h4>Last Name :{{ user.last_name }}</h4>
+            <h4>Email :{{ user.email }}</h4>
+
+            <a href = "{% url 'property_portal:editprofile' %}" class = "btn btn-primary btn-lg edit-btn" role = "button">
+                <span class="glyphicon glyphicon-edit">  Edit Profile </span>
+            </a>
+        </div>
+    </div>
+
+    <div class = "col-md-5">
+        <div class="thumbnail">
+            <img src="/media/user images1.jpg" alt="Lights">
+        </div>
+    </div>
+</div>
+{% endblock %}

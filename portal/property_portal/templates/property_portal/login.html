@@ -1,0 +1,40 @@
+
+
+{% extends 'property_portal/base.html' %}
+{% block title %} Login {% endblock %}
+{% block body %}
+<div class = "container-fluid">
+    <div class ="row">
+        <div class = "col-md-6">
+            <div style="padding: 20px 20px 0px;">
+                <h3 class="change_password" style="font-family:sans-serif; color:gray;">
+                    Things you Can Do with RealEstate Account
+                </h3>
+                <ul style="font-family:sans; color:gray; font-size:18px;">
+                    <li>Post one Single Property for FREE</li>
+                    <li>Set property alerts for your requirement</li>
+                    <li>Get accessed by over 1 Lakh buyers</li>
+                    <li>Showcase your property as Rental, PG or for Sale</li>
+                    <li>Get instant queries over Phone, Email and SMS</li>
+                    <li>Performance in search & Track responses & views online</li>
+                    <li>Add detailed property information & multiple photos per listing</li>
+                </ul>
+            </div>
+        </div>
+            <div class="col-md-6">
+                <div class="jumbotron" style = "padding: 10px 50px 10px; margin: 10px auto 10px; ">
+                <center><h3>Login Form</h3></center>
+                <form action ="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% include 'property_portal/form-template.html' %}
+                    <div class = "form-group">
+                        <button type = "submit" class = "btn btn-success">Submit</button>
+                        <h6>New to RealEstate?</h6>
+                        <h4><a href = "{% url 'property_portal:register' %}">Register Here</a></h4>
+                    </div>
+                </form>
+                </div>
+            </div>
+    </div>
+</div>
+{% endblock %}

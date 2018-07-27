@@ -1,0 +1,12 @@
+How to add google map
+----------------------------------
+
+Go to this website http://en.mygeoposition.com/ write your address here.
+you will find your address Latitude and Longitude value. copy this value
+then open your theme custom-map.js file located at
+yourthemefolder/js/custom-map.js and change this line
+value
+
+var location = new google.maps.LatLng(24.8966210, 91.8717760);
+
+save this file.

@@ -1,0 +1,45 @@
+{% extends 'property_portal/base.html' %}
+{% block title %} Register yourself {% endblock %}
+{% block album_active %}Active{% endblock %}
+{% block body %}
+<div class = "container-fluid">
+    <div class ="row">
+        <div class = "col-md-6">
+            <div style="padding: 20px 20px 10px;">
+                <h3 class="change_password" style="font-family:sans-serif; color:gray;">
+                    Things you Can Do with RealEstate.com Account
+                </h3>
+                <ul style="font-family:sans; color:gray; font-size:18px;">
+                    <li>Post one Single Property for FREE</li>
+                    <li>Set property alerts for your requirement</li>
+                    <li>Showcase your property as Rental, PG or for Sale</li>
+                    <li>Get instant queries over Phone, Email and SMS</li>
+                    <li>Performance in search & Track responses & views online</li>
+                    <li>Add detailed property information & multiple photos per listing</li>
+
+                    <h4 class="change_password" style="font-family:sans-serif; color:gray;">
+                        Requirement
+                    </h4>
+                    <li>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</li>
+                    <li>
+                        Raw passwords are not stored, so there is no way to see this user's password,
+                         but you can change the password using this form.
+                    </li>
+                </ul>
+            </div>
+        </div>
+            <div class="col-md-6">
+                <div class="jumbotron" style = "padding: 10px 50px 10px; margin: 10px auto 10px; ">
+                <center><h3>Create account in RealEstate.com</h3></center>
+                <form method="POST" class = "form-horizontal"  enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% include 'property_portal/form-template.html' %}
+                    <div class = "form-group">
+                            <button type = "submit" class = "btn btn-success">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

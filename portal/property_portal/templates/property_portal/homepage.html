@@ -1,0 +1,172 @@
+{% extends 'property_portal/base.html' %}
+<title>{% block title %} Welcome to Real Estate{% endblock %} </title>
+
+{% block body %}
+<!------------------------------------------------slideshow------------------------------------------------------------>
+
+<div class="slide-container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="/media/92b91a95292aa8465fbf4231a72b7c07.jpg" alt="Los Angeles" width="1100" height="500">
+      </div>
+
+      <div class="item">
+        <img src="/media/602237.jpg" alt="Chicago" width="1100" height="500">
+      </div>
+
+      <div class="item">
+        <img src="/media/Home-Wallpaper-21.jpg" alt="New york"  width="1100" height="500">
+      </div>
+
+      <div class="item">
+        <img src="/media/Home-Wallpaper-2.jpg" alt="New york" width="1100" height="500">
+      </div>
+
+       <div class="item">
+         <img src="/media/Home-Wallpaper-8.jpg" alt="New york" width="1100" height="500">
+       </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<!---------------------------------------well ------------------------------------------------------------->
+  <div class="jumbotron" style = "padding: 20px 10px 20px; margin: 20px 10px 20px; ">
+      <h4>
+      RealEstate.com is India's No 1 Property portal and has been adjudged as the most preferred property site in India,
+       by independent surveys. The portal provides a platform for property buyers and sellers to locate properties of interest
+        and source information on the real estate space in a transparent and unambiguous manner.
+    </h4>
+  </div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-3">
+      <div class="thumbnail">
+          <img src="/media/Home-front/PicsArt_1430931835064_7tILOgQ.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Sited at a comfortable place, provide a meaning to life.</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="thumbnail">
+          <img src="/media/Home-front/house-design-image-floor-plan-code-2-beds-2-baths-house-design-images-2017.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Full Furnished, a complete home decore for a complete family</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="thumbnail">
+          <img src="/media/Home-front/triplet.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Want to buy a house in a metro city, then what are you worried about?</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="thumbnail">
+          <img src="/media/Home-front/20140624_181052_20140625124055777_20141102224134533.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Thausand of perfect home for you to live peacefull and restfull.</p>
+          </div>
+      </div>
+    </div>
+      <div class="container">
+          <a href="{% url 'property_portal:buy' %}">
+              <button type="button" class="btn btn-info btn-block">Explore Buy Section</button>
+          </a>
+      </div>
+
+  </div>
+</div>
+
+<div class="jumbotron" style = "padding: 20px 10px 20px; margin: 20px auto 20px; ">
+    <h4>
+    Moving to a new city, want to rent appartment, flat instead of buying, we may have a option for you. Here at RealEstate.com
+    we provides best appartments for rent or for lease. Explore the rent section to find out your preferred space for you living.
+    Every property we show is checked buy our quality experts so that we provide you a comfortable place to stay.
+  </h4>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+
+      <div class="col-md-3">
+        <div class="thumbnail">
+            <img src="/media/rent/fbeeecc0-be73-11e7-b59f-42010af00007.jpg" alt="Lights" style="width:100%">
+            <div class="caption">
+              <p>Want to buy a house in a metro city, then what are you worried about?</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="thumbnail">
+            <img src="/media/rent/single-room-to-rent-fresh-on-excellent-new-house.jpg" alt="Lights" style="width:100%">
+            <div class="caption">
+              <p>Want to buy a house in a metro city, then what are you worried about?</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="thumbnail">
+            <img src="/media/rent/rooms-for-rent-12.jpg" alt="Lights" style="width:100%">
+            <div class="caption">
+              <p>Want to buy a house in a metro city, then what are you worried about?</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="thumbnail">
+            <img src="/media/rent/Rent-in-Singapore-room.jpg" alt="Lights" style="width:100%">
+            <div class="caption">
+              <p>Want to buy a house in a metro city, then what are you worried about?</p>
+            </div>
+        </div>
+      </div>
+
+       <div class="container">
+           <a href="{% url 'property_portal:rent' %}">
+               <button type="button" class="btn btn-info btn-block">Explore Rent Section</button>
+           </a>
+       </div>
+  </div>
+</div>
+    <!--<img src="/media/Home-front/20140118_165029_20140118172540177_5jrs7lZ.jpg" style="width:100%">-->
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    {% load staticfiles %}
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type = "text/css" href="{% static 'property_portal/style.css' %}"/>
+
+<style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  </style>
+<!--add a navigation bar -->
+
+<nav class = "navbar navbar-success">
+    <div class = "container-fluid">
+        <!-- header -->
+        <div class = "navbar-header">
+            <!-- add a toggle button -->
+            <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#topNavBar" >
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+            </button>
+            <!-- logo -->
+            <a class = "navbar-brand" href="{% url 'property_portal:home' %}">RealEstate.com</a>
+        </div>
+
+    <!-- create items on navigation bar  -->
+    <div class = "collapse navbar-collapse" id="topNavBar">
+        <ul class ="nav navbar-nav">
+            <li class = "">
+                <a class = "navbar-link" href = "{% url 'property_portal:buy' %}">
+                    <span class = "glyphicon glyphicon-home" area-hidden ="true"></span>&nbsp; Buy
+                </a>
+            </li>
+            <li class = "">
+                <a class = "navbar-link" href = "{% url 'property_portal:rent' %}">
+                    <span class = "glyphicon glyphicon-home" area-hidden ="true"></span>&nbsp; Rent
+                </a>
+            </li>
+             <li class ="dropdown">
+                <a class = "navbar-link" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <span class = "glyphicon glyphicon-home" area-hidden ="true"></span>&nbsp; Post Property
+                    <span class="caret"></span>
+                </a>
+                      <ul class="dropdown-menu">
+                          <li><a href="{% url 'property_portal:sell_property' %}">Sell Property</a></li>
+                          <li><a href="{% url 'property_portal:rent_property' %}">Rent Property</a></li>
+                     </ul>
+            </li>
+        </ul>
+        <!-- add a search field and a serach button
+
+        <form class = "navbar-form navbar-right" role ="search" method = "get" action="#">
+            <div class = "form-group">
+                <input type = "text" class = "form-control" name = "query" value="">
+            </div>
+            <button type = "submit" class= "btn btn-default">Search</button>
+        </form>
+    -->
+
+
+
+        <ul class ="nav navbar-nav navbar-right">
+         {% if request.user.username %}
+
+             <li class ="dropdown">
+                <a class = "navbar-user" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <span class = "glyphicon glyphicon-user" area-hidden ="true"></span>&nbsp;
+                     Welcome {{request.user.username}}
+                    <span class="caret"></span>
+                </a>
+                      <ul class="dropdown-menu">
+                          <li><a href="{% url 'property_portal:profile' %}">Profile</a></li>
+                          <li><a href="#">Activity</a></li>
+                          <li class ="divider"></li>
+                          <li>
+                              <a href="{% url 'property_portal:logout' %}">
+                                  <span class = "glyphicon glyphicon-off" area-hidden ="true"></span>&nbsp;
+                                  Logout
+                              </a>
+                          </li>
+                     </ul>
+            </li>
+
+            {% else %}
+            <li class = "">
+                <a href="{% url 'property_portal:login' %}">
+                    <span class = "glyphicon glyphicon-log-in" area-hidden ="true"></span>&nbsp; Login
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+
+</div>
+
+
+</nav>
+<div class="page-header" style = "margin-top: -10px; font-family:cursive; color: gray;">
+    <center><h3>India's largest online property site for a dream home</h3></center>
+ </div>
+</head>
+<body>
+    {%block body%}
+    {% endblock %}
+
+    <nav class="navbar navbar-inverse" style = "padding: 20px 50px 0px; margin: 30px auto 10px; ">
+      <ul class="nav navbar-nav">
+        <li><a href="{% url 'property_portal:home' %}">RealEstate</a></li>
+        <li><a href="{% url 'property_portal:buy' %}">Buy</a></li>
+        <li><a href="{% url 'property_portal:rent' %}">Rent</a></li>
+        <li><a href="#">References</a></li>
+
+      </ul>
+    </nav>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+@import url("https://font.googleapis.com/css?family=monospace");
+
+.navbar{
+    border-radius:  0;
+}
+
+.navbar-brand{
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bolder;
+    color: black;
+
+}
+
+.navbar-link{
+    font-family:sans-serif;
+    color: gray;
+}
+
+.navbar-user{
+    font-family:sans-serif ;
+    color: gray;
+}
+
+.slide-container{
+    width: 100%;
+    position: relative;
+    margin-top: -20px;
+}
+
+.edit-btn{
+    margin-top:20px;
+    margin-left:30px;
+}
+
+.profile-item h4{
+    margin:5px 15px 0px;
+    padding: 5px 0px 0px;
+    font-family: sans-serif;
+    color: gray;
+}

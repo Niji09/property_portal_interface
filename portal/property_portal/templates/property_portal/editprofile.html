@@ -1,0 +1,28 @@
+{% extends 'property_portal/base.html' %}
+<title>{% block title %} Edit User Profile{% endblock %}</title>
+
+{% block body %}
+
+<div class = "container-fluid">
+    <div class ="row">
+        <div class = "col-md-6">
+             <div class="">
+                 <img src="/media/edit user.jpeg" alt="Lights" style="width:100%">
+             </div>
+        </div>
+            <div class="col-md-6">
+                <div class="jumbotron" >
+                <center><h3>Edit Profile</h3></center>
+                <form method="POST" class = "form-horizontal"  enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'property_portal/form-template.html' %}
+                        <div class = "form-group">
+                            <button type = "submit" class = "btn btn-success">Submit</button>
+                            <a href = "{% url 'property_portal:change_password' %}"><h4>Change Password</h4></a>
+                        </div>
+                </form>
+                </div>
+            </div>
+    </div>
+</div>
+{% endblock %}

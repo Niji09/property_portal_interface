@@ -1,0 +1,33 @@
+{% extends 'property_portal/base.html' %}
+{% block title %} Post your property to RealEstate.com - Rent {% endblock %}
+{% block body %}
+<div class = "container-fluid">
+    <div class ="row">
+        <div class = "col-md-6">
+             <div class="">
+                 <img src="/media/rent image.jpg" alt="Lights" style="width:100%">
+             </div>
+              <div class="jumbotron">
+                 <p> RealEstate.com is India's No 1 Property portal and has been adjudged
+                   as the most preferred property site in India, by independent surveys.
+                    The portal provides a platform for property buyers and sellers to
+                    locate properties of interest and source information on the real estate
+                     space in a transparent and unambiguous manner.
+                 </p>
+              </div>
+        </div>
+            <div class="col-md-6">
+                <div class="jumbotron">
+                <center><h3>Rent Your Property</h3></center>
+                <form action ="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% include 'property_portal/form-template.html' %}
+                    <div class = "form-group">
+                        <button type = "submit" class = "btn btn-success">Submit</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+    </div>
+</div>
+{% endblock %}
